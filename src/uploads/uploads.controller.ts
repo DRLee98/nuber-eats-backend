@@ -16,8 +16,8 @@ export class UploadsController {
   async uploadFile(@UploadedFile() file) {
     AWS.config.update({
       credentials: {
-        accessKeyId: 'AKIA3PLQ4UNRM63FO5UF',
-        secretAccessKey: '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',
+        accessKeyId: process.env.AWS_KEY,
+        secretAccessKey: process.env.AWS_SECRET,
       },
     });
     try {
